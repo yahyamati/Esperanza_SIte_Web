@@ -1,0 +1,150 @@
+/* Basic reset to remove default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(2, 11, 43);
+    padding: 10px 20px;
+    color: white;
+    position: relative;
+    box-shadow: 0 0 10px 5px rgba(0, 56, 129, .5); /* Added shadow effect */
+    border-bottom-left-radius: 15px; /* Added bottom-left radius */
+    border-bottom-right-radius: 15px; /* Added bottom-right radius */
+}
+
+/* Navbar logo section */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    margin-left: 200px; /* Margin left for larger screens */
+}
+
+.navbar-logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.navbar-logo p {
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.navbar-logo span {
+    font-size: 25px;
+    font-weight: 500;
+    color: rgb(21, 156, 204);
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 4s forwards;
+    animation-delay: calc(var(--char-index) * 0.2s);
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Navbar links section */
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links a {
+    display: none;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease; 
+}
+
+.navbar-links a:hover,
+.navbar-links a.active {
+    color: rgb(21, 156, 204); 
+}
+
+.navbar-burger {
+    display: none;
+    
+}
+
+.burger-icon {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+/* Media query for tablet view */
+@media (max-width: 1024px) {
+    
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar-logo {
+        margin-left: 10px;
+    }
+}
+
+/* Media query for mobile/tablet view */
+@media (max-width: 768px) {
+    .navbar-logo {
+        margin-left: 0; /* Remove left margin for smaller screens */
+        justify-content: center; /* Center the logo */
+        margin-bottom: 10px; /* Add space between the logo and the burger menu */
+    }
+
+    .navbar-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgb(2, 11, 43);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        box-shadow: 0 0 10px 5px rgba(0, 56, 129, .5); /* Shadow for dropdown */
+        z-index: 1000; /* Ensure dropdown is on top */
+        opacity: 0; /* Initially hidden */
+        transform: translateY(-20px); /* Start slightly off-screen */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and transform */
+    }
+
+    .navbar-links.active {
+        opacity: 1; /* Show links */
+        transform: translateY(0); /* Move links into view */
+    }
+
+    .navbar-links a {
+        display: flex;
+        padding: 10px 20px;
+       
+    }
+
+    .navbar-links a:last-child {
+        border-bottom: none; /* Remove bottom border from the last link */
+    }
+
+    .navbar-burger {
+        display: block;
+    }
+}

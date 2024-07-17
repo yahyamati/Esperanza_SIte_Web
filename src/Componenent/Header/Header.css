@@ -1,0 +1,295 @@
+/* Basic reset to remove default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style the header container */
+  .header {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center;
+    padding-left:100px ;
+    padding-right: 100px;
+    min-height: 100vh; 
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  
+
+  
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    animation: logoMove 1s ease-in-out infinite;
+  }
+  
+  
+  .logo img {
+    height: 200px;
+    margin-bottom: 40px;
+    animation: flip 4s ease-in-out infinite; /* Flip animation */
+  }
+  
+  /* Keyframes for flipping the logo */
+  @keyframes flip {
+    0%, 100% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(180deg);
+    }
+  }
+  
+  /* Style for the text in the logo */
+  .logo .club-text p {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+  
+  /* Style for the "Club" text */
+  .logo .club-text {
+    display: flex;
+    gap: 2px; 
+    flex-wrap: wrap; 
+    justify-content: center;
+  }
+  
+  /* Flip animation for individual characters */
+  .logo .club-text span {
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(21, 156, 204);
+    display: inline-block;
+    opacity: 0;
+    animation: flipText 2s forwards; /* Flip text animation */
+    animation-delay: calc(var(--char-index) * 0.2s);
+  }
+  
+  /* Keyframes for flipping text characters */
+  @keyframes flipText {
+    0% {
+      opacity: 0;
+      transform: rotateX(90deg);
+    }
+    100% {
+      opacity: 1;
+      transform: rotateX(0deg);
+    }
+  }
+  
+  /* Add flip animation for "Club" text */
+  .logo .club-text span:nth-child(1) { --char-index: 0; }
+  .logo .club-text span:nth-child(2) { --char-index: 1; }
+  .logo .club-text span:nth-child(3) { --char-index: 2; }
+  .logo .club-text span:nth-child(4) { --char-index: 3; }
+  .logo .club-text span:nth-child(5) { --char-index: 4; }
+  .logo .club-text span:nth-child(6) { --char-index: 5; }
+  .logo .club-text span:nth-child(7) { --char-index: 6; }
+  .logo .club-text span:nth-child(8) { --char-index: 7; }
+  .logo .club-text span:nth-child(9) { --char-index: 8; }
+  .logo .club-text span:nth-child(10) { --char-index: 9; }
+  .logo .club-text span:nth-child(11) { --char-index: 10; }
+  .logo .club-text span:nth-child(12) { --char-index: 11; }
+  .logo .club-text span:nth-child(13) { --char-index: 12; }
+  .logo .club-text span:nth-child(14) { --char-index: 13; }
+  
+
+  
+  /* Style for the explain text container */
+  .explain-text {
+    max-width: 600px; /* Limit the maximum width */
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Style for the paragraphs in the explain text */
+  .explain-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for the emphasized text */
+  .explain-text span {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive styles */
+  
+  /* Tablet view */
+  @media (max-width: 1024px) {
+    .header {
+      
+      padding: 20px 10px; /* Adjust padding */
+    }
+  
+    .logo {
+      gap: 5px; /* Adjust gap */
+      margin-top: 20px; /* Add margin to separate from text */
+    }
+  
+    .logo img {
+      height: 150px; /* Smaller logo */
+    }
+  
+    .logo club-text p {
+      font-size: 30px; /* Smaller font size */
+    }
+  
+    .logo .club-text span {
+      font-size: 30px; /* Smaller font size for Club text */
+    }
+  
+    .explain-text p {
+      font-size: 16px; /* Smaller font size for paragraphs */
+    }
+  }
+  
+  /* Mobile view */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column-reverse; /* Logo on top and text below */
+      padding: 20px 5px; /* Adjust padding */
+    }
+  
+    .logo {
+      gap: 5px; /* Adjust gap */
+      margin-top: 0; /* Remove margin */
+    }
+  
+    .logo img {
+      height: 60px; /* Smaller logo */
+    }
+
+    
+  
+    .logo .club-text p {
+      font-size: 24px; /* Smaller font size */
+    }
+  
+   
+    .logo .club-text span {
+      font-size: 24px; /* Smaller font size for Club text */
+    }
+  
+    .explain-text {
+      max-width: 100%; /* Full width */
+      padding: 10px; /* Adjust padding */
+    }
+  
+    .explain-text p {
+      font-size: 14px; /* Smaller font size for paragraphs */
+    }
+  }
+  
+  /* Small screens (for very small devices) */
+  @media (max-width: 480px) {
+
+    .header{
+        justify-content: flex-end;
+
+
+    }
+    .explain-text {
+      padding-top: 50px; /* Reduce padding */
+    }
+  
+
+    .explain-text p {
+      font-size: 12px; /* Smaller font size for very small screens */
+    }
+
+    .logo{
+
+        padding-top: 60px;
+    }
+
+    .logo img{
+
+       height: 80px;
+       margin-bottom: 20px;
+    }
+
+    
+    .logo .club-text p {
+      font-size: 20px; /* Smaller font size for very small screens */
+      margin-right: 2px;
+    }
+  
+    .logo .club-text span {
+      font-size: 20px; /* Smaller font size for very small screens */
+    }
+  }
+  
+
+  .text-rotator {
+    display: inline-block;
+    font-weight: bold;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  .text-rotator.animating {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  
+  .fade-enter {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .fade-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  
+  .fade-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .fade-exit-active {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 500ms, transform 500ms;
+  }
+  
+
+
+  .explain-text .firstText{
+
+    font-size: 35px;
+    font-weight: bold;
+    
+  }
+
+
+  .secendText{
+    display: flex;
+  }
+  
+  .secendText p{
+    font-size: 26px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  .secendText span{
+    color: rgb(21, 156, 204);
+  }
