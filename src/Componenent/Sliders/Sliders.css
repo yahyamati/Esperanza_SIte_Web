@@ -55,8 +55,8 @@
 .card-content h3 {
     color: white;
     font-weight: bold;
-    text-align: left;
     margin-bottom: 10px;
+    text-align: start;
 }
 
 /* Book container styles */
@@ -120,6 +120,13 @@
 
 .page p{
     padding-top: 50px;
+}
+.page h3{
+    text-align: center;
+    font-weight: bold;
+    font-size: 21px;
+    margin-bottom: 30px;
+
 }
 
 .page-number {

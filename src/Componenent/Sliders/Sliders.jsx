@@ -69,15 +69,14 @@ const Sliders = () => {
             minHeight={400}
             maxHeight={800}
             maxShadowOpacity={0.5}
-            
           >
             {selectedBookContent.length > 0 &&
               selectedBookContent.map((page, idx) => (
                 <div key={idx} className="page">
-                  <h3>{page.title}</h3>
-                  <img src={page.img}  style={{ width: '100%', height: 'auto' }} />
+                    <h3>{page.title}</h3>
+                  <img src={page.img} alt={`Page ${idx + 1}`} style={{ width: '100%', height: 'auto' }} />
                   <p>{page.description}</p>
-                  <p className="page-number"> {idx + 1}</p> {/* Display page number */}
+                  <p className="page-number">Page {idx + 1}</p> {/* Display page number at the bottom */}
                 </div>
               ))}
           </HTMLFlipBook>
