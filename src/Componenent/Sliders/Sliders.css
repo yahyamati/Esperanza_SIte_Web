@@ -66,7 +66,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),  no-repeat center center fixed;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), no-repeat center center fixed;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -74,24 +74,24 @@
     z-index: 1000;
 }
 
-.flip-book-container {
-    width: 70%; /* Adjust width as needed */
-    height: 80%; /* Adjust height as needed */
+.flip-book {
     display: flex;
     justify-content: center;
     align-items: center;
-   
+    margin-top: 5%; /* Adjust margin as needed */
+    margin-bottom: 5%; /* Adjust margin as needed */
+    width: 70%;
+    height: 80%;
 }
 
 .book-container .flip-book {
-    top: 30px;  
     width: 100%;
     height: 100%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .close-button {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     background: none;
@@ -99,6 +99,7 @@
     color: white;
     font-size: 24px;
     cursor: pointer;
+    z-index: 1001; /* Ensure it’s above other elements */
 }
 
 .close-button:hover {
@@ -126,7 +127,7 @@
 }
 
 /* Responsive styles for screens 480px wide and smaller */
-@media (max-width: 580px) {
+@media (max-width: 480px) {
     .slider-container {
         width: 90%; /* Make slider container wider on small screens */
     }
@@ -147,17 +148,19 @@
     }
 
     .book-container {
-        background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('path/to/background-image.jpg') no-repeat center center fixed;
+        background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), no-repeat center center fixed;
         background-size: cover;
     }
 
-    .flip-book-container {
+    .flip-book {
         width: 90%; /* Make flip book container wider on small screens */
         height: 90%; /* Make flip book container taller on small screens */
     }
 
     .close-button {
         font-size: 20px; /* Reduce font size for close button */
+        top: 10px; /* Adjust top position */
+        right: 10px; /* Adjust right position */
     }
 
     .page p {

@@ -69,7 +69,7 @@ const Sliders = () => {
             minHeight={400}
             maxHeight={800}
             maxShadowOpacity={0.5}
-            mobileScrollSupport={true}
+            
           >
             {selectedBookContent.length > 0 &&
               selectedBookContent.map((page, idx) => (
