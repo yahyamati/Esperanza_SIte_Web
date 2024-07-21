@@ -144,6 +144,12 @@
     border-radius: 8px; /* Optional: rounds the corners of the images */
 }
 
+
+@media (min-width: 1024px) {
+    .page p{
+        padding-top: 12px;
+    }
+}
 /* Responsive styles for screens 480px wide and smaller */
 @media (max-width: 480px) {
     .slider-container {
@@ -193,3 +199,6 @@
         padding-top: 10px;
     }
 }
+
+
+
