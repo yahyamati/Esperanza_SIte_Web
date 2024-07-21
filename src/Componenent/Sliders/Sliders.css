@@ -1,0 +1,166 @@
+/* Slider container styles */
+.slider-container {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.slider-container h2 {
+    font-size: 2.5vw;
+    color: white;
+    margin-bottom: 90px;
+    margin-top: 40px;
+}
+
+.slick-slide {
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+    border: 1px solid rgb(51, 65, 85);
+    border-radius: 8px;
+}
+
+.card {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card-content {
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-content p {
+    color: rgb(209, 213, 219);
+    text-align: left;
+}
+
+.card-content h3 {
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* Book container styles */
+.book-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),  no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.flip-book-container {
+    width: 70%; /* Adjust width as needed */
+    height: 80%; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.book-container .flip-book {
+    top: 30px;  
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #ff0000; /* Change color on hover if desired */
+}
+
+/* Page styles for the flip book */
+.page {
+    background-color: #f0f0f0; /* Adjust this color as needed */
+    border: 1px solid #ddd; /* Optional: adds a border to each page */
+    padding: 20px; /* Optional: adds padding to the content of the page */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: none; /* Disable any transition effects on hover */
+    cursor: pointer; /* Ensure cursor changes on click */
+}
+
+.page img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: rounds the corners of the images */
+}
+
+/* Responsive styles for screens 480px wide and smaller */
+@media (max-width: 480px) {
+    .slider-container {
+        width: 90%; /* Make slider container wider on small screens */
+    }
+
+    .slider-container h2 {
+        font-size: 4vw; /* Increase font size for better readability */
+        margin-bottom: 60px; /* Reduce margin for better fit */
+        margin-top: 20px; /* Reduce top margin */
+    }
+
+    .card {
+        max-width: 100%; /* Make cards take full width */
+        padding: 5px; /* Reduce padding */
+    }
+
+    .card img {
+        height: 200px; /* Adjust height for smaller screens */
+    }
+
+    .book-container {
+        background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('path/to/background-image.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    .flip-book-container {
+        width: 90%; /* Make flip book container wider on small screens */
+        height: 90%; /* Make flip book container taller on small screens */
+    }
+
+    .close-button {
+        font-size: 20px; /* Reduce font size for close button */
+    }
+
+    .page p {
+        font-size: 12px;
+    }
+}

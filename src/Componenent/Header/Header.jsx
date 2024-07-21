@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './Header.css';
 import { assets } from '../../assets/assets';
 

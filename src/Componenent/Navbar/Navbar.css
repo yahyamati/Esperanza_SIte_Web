@@ -18,7 +18,10 @@ body {
     background-color: rgb(2, 11, 43);
     padding: 10px 20px;
     color: white;
-    position: relative;
+    position: fixed; /* Fixed position */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    z-index: 1000; /* Ensure it is on top */
     box-shadow: 0 0 10px 5px rgba(0, 56, 129, .5); /* Added shadow effect */
     border-bottom-left-radius: 15px; /* Added bottom-left radius */
     border-bottom-right-radius: 15px; /* Added bottom-right radius */
@@ -80,7 +83,6 @@ body {
 
 .navbar-burger {
     display: none;
-    
 }
 
 .burger-icon {
@@ -92,7 +94,6 @@ body {
 
 /* Media query for tablet view */
 @media (max-width: 1024px) {
-    
     .navbar {
         padding: 10px;
     }
@@ -137,7 +138,6 @@ body {
     .navbar-links a {
         display: flex;
         padding: 10px 20px;
-       
     }
 
     .navbar-links a:last-child {

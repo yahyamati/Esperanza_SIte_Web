@@ -114,6 +114,16 @@
     text-align: left; /* Align text to the left */
   }
   
+  .explain-text .TeerdText{
+    margin-top: 30px;
+    padding-left: 12px;
+    text-align: left;
+  }
+  .secendText{
+    margin-top: 30px;
+  }
+  
+  
   /* Style for the paragraphs in the explain text */
   .explain-text p {
     font-size: 18px;
@@ -201,6 +211,7 @@
   @media (max-width: 480px) {
 
     .header{
+      margin-top: 100px;
         justify-content: flex-end;
 
 
@@ -210,8 +221,11 @@
     }
   
 
-    .explain-text p {
-      font-size: 12px; /* Smaller font size for very small screens */
+    .explain-text .TeerdText {
+      font-size: 17px;
+       text-align: center;
+       
+      
     }
 
     .logo{
@@ -276,20 +290,24 @@
 
     font-size: 35px;
     font-weight: bold;
+    text-align: center;
     
   }
 
 
   .secendText{
     display: flex;
+    justify-content: center;
   }
   
   .secendText p{
     font-size: 26px;
-    font-weight: bold;
+    font-weight: 400;
     margin-right: 10px;
+    
   }
 
   .secendText span{
     color: rgb(21, 156, 204);
+    margin-top: 8px;
   }
