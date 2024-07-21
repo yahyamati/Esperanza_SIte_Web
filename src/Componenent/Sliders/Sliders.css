@@ -126,7 +126,7 @@
 }
 
 /* Responsive styles for screens 480px wide and smaller */
-@media (max-width: 480px) {
+@media (max-width: 580px) {
     .slider-container {
         width: 90%; /* Make slider container wider on small screens */
     }
@@ -143,7 +143,7 @@
     }
 
     .card img {
-        height: 200px; /* Adjust height for smaller screens */
+        height: 300px; /* Adjust height for smaller screens */
     }
 
     .book-container {
