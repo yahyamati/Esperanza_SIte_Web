@@ -106,7 +106,6 @@
     color: #ff0000; /* Change color on hover if desired */
 }
 
-/* Page styles for the flip book */
 .page {
     background-color: #f0f0f0; /* Adjust this color as needed */
     border: 1px solid #ddd; /* Optional: adds a border to each page */
@@ -116,9 +115,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: none; /* Disable any transition effects on hover */
-    cursor: pointer; /* Ensure cursor changes on click */
+    position: relative; /* Ensure positioning for the page number */
 }
+
+.page p{
+    padding-top: 50px;
+}
+
+.page-number {
+    position: absolute;
+    bottom: 10px; /* Adjust this value to control the spacing from the bottom */
+    font-size: 14px; /* Adjust font size as needed */
+    color: #333; /* Adjust color as needed */
+    
+}
+
 
 .page img {
     max-width: 100%;
@@ -133,7 +144,7 @@
     }
 
     .slider-container h2 {
-        font-size: 4vw; /* Increase font size for better readability */
+        font-size: 8vw; /* Increase font size for better readability */
         margin-bottom: 60px; /* Reduce margin for better fit */
         margin-top: 20px; /* Reduce top margin */
     }
@@ -164,6 +175,14 @@
     }
 
     .page p {
-        font-size: 12px;
+        font-size: 11px;
+        padding-top: 5px;
+    }
+    .page-number {
+        position: absolute;
+        bottom: 10px; /* Adjust this value to control the spacing from the bottom */
+        font-size: 14px; /* Adjust font size as needed */
+        color: #333; /* Adjust color as needed */
+        padding-top: 10px;
     }
 }
