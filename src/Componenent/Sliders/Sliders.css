@@ -3,6 +3,8 @@
     width: 70%;
     margin: 0 auto;
     text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .slider-container h2 {
@@ -154,6 +156,8 @@
 @media (max-width: 480px) {
     .slider-container {
         width: 90%; /* Make slider container wider on small screens */
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
 
     .slider-container h2 {
