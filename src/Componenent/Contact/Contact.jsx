@@ -46,15 +46,18 @@ const Contact = () => {
 
   return (
     <div className='contact-container'>
-      <div className="questions">
-        <p className='titel'>Frequently asked questions</p>
-        {questionsData.map((item, index) => (
-          <div className="question-box" key={index} onClick={() => toggleQuestion(index)}>
-            <p>{item.question}</p>
-            {visibleQuestions[index] && <p>{item.answer}</p>}
+    <div className="questions">
+      <p className='titel'>Frequently asked questions</p>
+      {questionsData.map((item, index) => (
+        <div className="question-box" key={index} onClick={() => toggleQuestion(index)}>
+          <div className="question-header">
+            <p className='question-text'>{item.question}</p>
+            <span className={`arrow ${visibleQuestions[index] ? 'up' : 'down'}`}></span>
           </div>
-        ))}
-      </div>
+          {visibleQuestions[index] && <p className='answer'>{item.answer}</p>}
+        </div>
+      ))}
+    </div>
 
       <div className='contact-form'>
         <form onSubmit={onSubmit}>
