@@ -20,8 +20,10 @@
     margin-right: 20px;
     border: 1px solid rgb(51, 65, 85);
     border-radius: 8px;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    border-end-end-radius:0 ;
+    border-bottom: none;
+    
+   
 }
 
 .card {
@@ -31,6 +33,7 @@
     max-width: 400px;
     padding: 10px;
     cursor: pointer;
+    height: 0;
    
     
 }
@@ -51,11 +54,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 }
 
 .card-content p {
     color: rgb(209, 213, 219);
     text-align: left;
+   
 }
 
 .card-content h3 {
