@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <img src={assets.logo} alt="Esperanza Club Logo" />
+        <img src={assets.logo} alt="Esperanza Club Logo"  />
         <p>Esperanza</p>
         {'Club'.split('').map((char, index) => (
           <span key={index}>{char}</span>
