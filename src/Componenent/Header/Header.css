@@ -301,13 +301,14 @@
   }
   
   .secendText p{
-    font-size: 26px;
+    font-size: 23px;
     font-weight: 400;
-    margin-right: 10px;
+    margin-right: 7px;
     
   }
 
   .secendText span{
     color: rgb(21, 156, 204);
-    margin-top: 8px;
+    margin-top: 4px;
+    font-size: 22px;
   }
