@@ -5,6 +5,12 @@
     text-align: center;
     box-shadow: 0 -5px 5px rgba(0, 56, 129, 0.5);
   }
+
+  .footer .madeby{
+    padding-top: 10px;
+    font-size: 13px;
+    font-weight: 500;
+  }
   
   .footer-container {
     display: grid;

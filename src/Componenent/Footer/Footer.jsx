@@ -19,6 +19,7 @@ const Footer = () => {
           <p className="footer-text">Esperanza Club</p>
         </div>
       </div>
+      <p className='madeby'>Made by Yahia Mati</p>
       <hr className="footer-divider" />
       <div className="footer-copyright">
         <p>© 2024 Esperanza Club. All rights reserved.</p>
