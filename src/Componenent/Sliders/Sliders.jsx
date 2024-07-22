@@ -40,7 +40,7 @@ const Sliders = () => {
 
   return (
     <div>
-      <div className="slider-container">
+      <div className="slider-container" id='Slider'>
         <h2>Our Events</h2>
         <Slider {...settings}>
           {data.map((item, index) => (

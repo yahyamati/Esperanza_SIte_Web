@@ -45,7 +45,7 @@ const Contact = () => {
 
 
   return (
-    <div className='contact-container'>
+    <div className='contact-container' id='Contact'>
     <div className="questions">
       <p className='titel'>Frequently asked questions</p>
       {questionsData.map((item, index) => (

@@ -1,10 +1,9 @@
-import React, { useState ,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import { assets } from '../../assets/assets';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
 
   useEffect(() => {
     const spans = document.querySelectorAll('.navbar-logo span');
@@ -17,6 +16,11 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   }
 
+  const handleLinkClick = () => {
+    // Close the menu when a link is clicked
+    setIsMenuOpen(false);
+  }
+
   return (
     <nav className="navbar">
       <div className="navbar-logo">
@@ -27,9 +31,9 @@ const Navbar = () => {
         ))}
       </div>
       <div className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
-        <a href="/">Home</a>
-        <a href="/events">Events</a>
-        <a href="/contact">Contact</a>
+        <a href="#home" onClick={handleLinkClick}>Home</a>
+        <a href="#Slider" onClick={handleLinkClick}>Events</a>
+        <a href="#Contact" onClick={handleLinkClick}>Contact</a>
       </div>
       <div className="navbar-burger" onClick={toggleMenu}>
         <div className="burger-icon"></div>
