@@ -1,0 +1,137 @@
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .contact-form {
+    
+    width: 750px;
+    padding: 20px;
+    background-color: rgb(2, 11, 43);
+    color: white;
+    box-shadow: 0 0 10px 5px rgba(0, 56, 129, .5);
+    border-radius: 10px;
+    margin-right: 80px;
+    margin-bottom: 100px;
+  }
+  
+  .questions {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 45px;
+  }
+  .questions .titel{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .question-box {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-bottom: 2px solid white;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .question-box p:first-of-type {
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .question-box p:first-of-type::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    bottom: -2px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  .question-box p:first-of-type:hover::after {
+    width: 100%;
+  }
+
+  form {
+    width: 100%;
+  }
+  
+  .input-box {
+    margin-bottom: 15px;
+  }
+  
+  .input-box label {
+    display: block;
+    margin-bottom: 9px;
+    font-weight: 500;
+  }
+  
+  .field {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 17px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    color: white;
+    margin-bottom: 5px;
+  }
+  
+  .field.messg {
+    height: 100px;
+    resize: none;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Optional, for spacing */
+  }
+  
+  
+  button.submit {
+    padding: 10px 20px; /* Adjusted for better appearance */
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 10px 5px rgba(0, 56, 129, 0.5);
+  }
+  
+  button.submit:hover {
+    background-color: rgb(0, 56, 129, .5);
+  }
+  
+
+
+  @media (max-width: 480px) {
+    .contact-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .contact-form, .questions {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+  
+    .questions {
+      padding-left: 0;
+      margin-top: 20px;
+    }
+  }

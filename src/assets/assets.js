@@ -17,9 +17,6 @@ import english4 from './english4.JPG'
 
 
 
-
-
-
 export const assets = {
     logo,
     Team,
@@ -147,5 +144,22 @@ export const data = [
         ],
       },
 
+      
+
 ]
+
+export const questionsData = [
+  {
+    question: "How can you join us?",
+    answer: "At the start of each academic year, we hold a recruitment drive where we invite all students to join us. We also have a membership form that you can fill out and submit to us. We will get back to you as soon as possible."
+  },
+  {
+    question: "Who can join us?",
+    answer: "We are open to all students in the university. We do not discriminate any student based on his/her major."
+  },
+  {
+    question: "Why join us?",
+    answer: "You will learn and develop leadership skills such as decision making, problem solving, delegation, and organization. You will of course acquire skills and experiences which will complement your university course, meet new people and live new experiences. And, of course, have fun!"
+  }
+];
 
