@@ -20,6 +20,8 @@
     margin-right: 20px;
     border: 1px solid rgb(51, 65, 85);
     border-radius: 8px;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .card {
@@ -29,6 +31,8 @@
     max-width: 400px;
     padding: 10px;
     cursor: pointer;
+   
+    
 }
 
 .card img {
@@ -80,8 +84,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5%; /* Adjust margin as needed */
-    margin-bottom: 5%; /* Adjust margin as needed */
+    margin-top: 0; /* Adjust margin as needed */
+    margin-bottom: 0; /* Adjust margin as needed */
     width: 70%;
     height: 80%;
 }
